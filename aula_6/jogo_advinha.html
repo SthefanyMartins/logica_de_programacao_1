@@ -1,0 +1,33 @@
+<!-- CAP 09 -->
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase ){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(valor){
+        return Math.round(Math.random() * valor);
+    }
+
+    var numeroPensado = sorteia(100);
+    console.log(numeroPensado);
+    var chute = parseInt(prompt("digite seu chute!"));
+
+    if(chute == numeroPensado) {
+        mostra("Você acertou!");
+    } else {
+        if(chute < numeroPensado){
+            mostra("O número pensado é maior que " + chute);
+        }else{
+            mostra("O número pensado é menor que " + chute);
+        }
+        //mostra("Você errou, o número pensado foi " + numeroPensado);
+    }
+
+</script>
